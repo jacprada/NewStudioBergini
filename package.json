@@ -1,0 +1,24 @@
+{
+  "name": "studiobergini",
+  "version": "2.0.0",
+  "author": "yukoncollective",
+  "description": "Studio Bergini",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacprada/NewStudioBergini.git"
+  },
+  "grunt": "^0.4.5",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "~3.0.3",
+    "grunt-browser-sync": "~2.1.3",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-cssmin": "~0.12.3",
+    "grunt-contrib-sass": "~0.9.2",
+    "grunt-contrib-uglify": "~0.9.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-dev-update": "~1.3.0",
+    "grunt-svgmin": "~2.0.1"
+  }
+}
