@@ -19,17 +19,14 @@ node_modules
 *.Trashes
 # and "themes" directories.
 # specify (see the commented-out examples for hints on how to do this.)
-/wordpress/wp-content/*
+# /wordpress/wp-content/*
 /node_modules
-!/wordpress/wp-content/themes/
+# /wordpress/wp-content/themes/
 # Ignore everything in the "plugins" directory, except the plugins you
 .Spotlight-V100
 /bower_components
 # Ignore everything in the "wp-content" directory, except the "plugins"
-!/wordpress/wp-content/
 !.gitignore
-/wordpress/wp-content/themes/*
-!/wordpress/wp-content/themes/kinfolk2016/
 ehthumbs.db
 
 /deploy
@@ -42,4 +39,3 @@ ehthumbs.db
 #############################
 /robots.txt
 /wordpress/wp-content/plugins/*
-/wordpress/wp-content/themes/kinfolk2016/.sublime-gulp.cache
