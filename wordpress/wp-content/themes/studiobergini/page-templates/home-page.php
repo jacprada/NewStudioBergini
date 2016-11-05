@@ -13,19 +13,19 @@ Template Name: Home page
  * @since Yukon Collective - Studio Bergini 1.0
  */
 
+$selected_projects = get_field('selected_projects');
 
 get_header();
 ?>
 
-<h1>Hello World</h1>
+<? if($selected_projects): ?>
 
-<? if (have_posts()) : while (have_posts()) : the_post();?>
-	
-<main>
+    <? foreach($selected_projects as $post): ?>
+      <? setup_postdata($post); ?>
+        <a href="<? the_permalink(); ?>"><?php the_title(); ?></a>
+    <? endforeach; ?>
 
+    <? wp_reset_postdata(); ?>
+<?php endif; ?>
 
-</main>
-
-<?endwhile; endif;?>
-
-<?php get_footer(); ?>
+<? get_footer(); ?>
