@@ -51,7 +51,7 @@ get_header();
           <div class="my-slider">
             <ul>
               <? foreach($project_gallery as $key=>$project_image): ?>
-                <li><img src="<?php echo $project_image['sizes']['thumbnail']; ?>" alt="<?php echo $project_image['alt']; ?>" data-num="<?= $key + 1 ?>"></li>
+                <li><img src="<?php echo $project_image['sizes']['bergini']; ?>" alt="<?php echo $project_image['alt']; ?>" data-num="<?= $key + 1 ?>"></li>
               <? endforeach; ?>
             </ul>
           </div>

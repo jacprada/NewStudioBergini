@@ -158,3 +158,7 @@ function wat_remove_jquery_migrate( &$scripts)
 
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'bergini', 'auto', 500, false ); //(scaled)
+}
