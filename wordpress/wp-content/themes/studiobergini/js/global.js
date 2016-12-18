@@ -71,6 +71,51 @@ function closeMenuMobile() {
 
 $(function() {
 
+  // ARCHIVE PAGE
+
+  // external JS: masonry.pkgd.js
+
+  var $grid = $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: 400,
+    stagger: 30,
+  });
+
+  $grid.on( 'click', '.grid-item', function() {
+    // change size of item via class
+    $( this ).toggleClass('grid-item--gigante');
+    // trigger layout
+    $grid.masonry();
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   initialize();
 
   function initialize() {
@@ -128,7 +173,7 @@ $(function() {
       setWaypoints();
       getImageWidth();
     } else {
-      setTimeout(introAnimation, 500);
+      setTimeout(introAnimation, 10);
       setTimeout(outroAnimation, 1000);
       setTimeout(setWaypoints, 1000);
       setTimeout(getImageWidth, 1000);

@@ -27,7 +27,7 @@ $all_projects = get_posts($args);
 get_header();
 ?>
 
-<? if($all_projects): ?>
+<? /* if($all_projects): ?>
 
     <? foreach($all_projects as $key=>$post): ?>
       <? setup_postdata($post); 
@@ -89,6 +89,27 @@ get_header();
     <? endforeach; ?>
 
     <? wp_reset_postdata(); ?>
-<?php endif; ?>
+<?php endif; */ ?>
+
+<div class="grid">
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+
 
 <? get_footer(); ?>
