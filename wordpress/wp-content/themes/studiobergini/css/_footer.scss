@@ -38,4 +38,18 @@ footer {
       bottom: 0;
     }
   }
+
+  @media only screen and (max-width: 850px) {
+    flex-direction: column;
+
+    div {
+      width: 90%;
+      margin: 30px auto;
+
+      p.contact-credits {
+        position: relative;
+        margin-top: 28px;
+      }
+    }
+  }
 }
