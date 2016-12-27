@@ -1,43 +1,60 @@
 <?
 
-// function wat_init() {
+function add_theme_caps(){
+  $admins = get_role('administrator');
+  $admins->add_cap('edit_project'); 
+  $admins->add_cap('edit_projects'); 
+  $admins->add_cap('edit_other_projects'); 
+  $admins->add_cap('publish_projects'); 
+  $admins->add_cap('read_project'); 
+  $admins->add_cap('read_private_projects'); 
+  $admins->add_cap('create_projects');
+  $admins->add_cap('delete_project'); 
+  $admins->add_cap('delete_projects'); 
+}
+
+add_action('admin_init', 'add_theme_caps');
 
 
+function as_init() {
+  register_post_type( 'projects', array(
+    'labels'                => array(
+      'name'                => __('Projects'),
+      'singular_name'       => __('Project'),
+      'add_new'             => __('Add new Project'),
+      'add_new_item'        => __('Add a new Project'),
+      'view_item'           => __('View Project'),
+      'edit_item'           => __('Edit Project'),
+      'search_items'        => __('Search Projects'),
+      'not_found'           => __('No Projects found'),
+      'not_found_in_trash'  => __('No Projects found in trash'),
+      ),
+    'public'                => false,
+    'has_archive'           => false,
+    'hierarchical'          => false,
+    'menu_position'         => 5,
+    'supports'              => array('title'),
+    'show_ui'               => true,
+    'query_var'             => true,
+    'show_in_menu'          => true,
+    'menu_icon'             => 'dashicons-admin-appearance',
+    'capability_type'       => 'project',
+    'taxonomies'            => array('post_tag', 'category'),
+    'capabilities'          => array(
+      'edit_post'           => 'edit_project', 
+      'read_post'           => 'read_project', 
+      'edit_posts'          => 'edit_projects', 
+      'edit_others_posts'   => 'edit_others_projects', 
+      'publish_posts'       => 'publish_projects',       
+      'read_private_posts'  => 'read_private_projects', 
+      'create_posts'        => 'create_projects', 
+      'delete_posts'        => 'delete_projects', 
+      ),
+    'show_in_rest'          => true,
+    'rest_base'             => 'projects',
+    'rest_controller_class' => 'WP_REST_Posts_Controller',
+        )
+    );
+}
 
-
-
-//     //search locations
-//     // Add new taxonomy, NOT hierarchical (like tags)
-//         $labels = array(
-//             'name'                       => _x( 'Property locations', 'taxonomy general name' ),
-//             'singular_name'              => _x( 'Property location', 'taxonomy singular name' ),
-//             'search_items'               => __( 'Search Property locations' ),
-//             'popular_items'              => __( 'Popular Property locations' ),
-//             'all_items'                  => __( 'All Property locations' ),
-//             'parent_item'                => null,
-//             'parent_item_colon'          => null,
-//             'edit_item'                  => __( 'Edit Property location' ),
-//             'update_item'                => __( 'Update Property location' ),
-//             'add_new_item'               => __( 'Add New Property location' ),
-//             'new_item_name'              => __( 'New Property location Name' ),
-//             'separate_items_with_commas' => __( 'Separate Property locations with commas' ),
-//             'add_or_remove_items'        => __( 'Add or remove Property locations' ),
-//             'choose_from_most_used'      => __( 'Choose from the most used Property locations' ),
-//             'not_found'                  => __( 'No Property locations found.' ),
-//             'menu_name'                  => __( 'Property locations' ),
-//         );
-
-//         $args = array(
-//             'hierarchical'          => true,
-//             'labels'                => $labels,
-//             'show_ui'               => true,
-//             'show_admin_column'     => true,
-//             'update_count_callback' => '_update_post_term_count',
-//             'query_var'             => true,
-//         );
-
-//         register_taxonomy( 'property_location', 'met_properties', $args );
-
-//     flush_rewrite_rules(true );
-// }
-// add_action( 'init', 'wat_init' );
+add_action('init', 'as_init');

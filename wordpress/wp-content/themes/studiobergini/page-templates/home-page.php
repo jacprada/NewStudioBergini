@@ -43,8 +43,6 @@ get_header();
         <div class="project-left">
           <!--  First Paragraph (Add Text Here, Use <br> For New Line) -->
           <p class="text-left"><?= $project_content_first ?></p>
-          <!--  Read More Button (Full Size) -->
-          <p class="text-toggle-more"><br><a class="toggle-text toggle-more" href="#">(more)</a></p>
         </div>
         <div class="project-right">
           <!--  Project Images Slider (Add Images Here, Use Alt For Image Description) -->
@@ -65,6 +63,8 @@ get_header();
           <p class="text-toggle-less"><br><a class="toggle-text toggle-less" href="#">(less)</a></p>
         </div>
         <div class="project-bottom">
+          <!--  Read More Button (Full Size) -->
+          <p class="text-toggle-more desktop"><a class="toggle-text toggle-more" href="#">(more)</a></p>
           <!--  Project Information, Add Text Here -->
           <h1 class="work-title"><?= $project_title ?></h1>
           <h2 class="work-detail"><?= $project_client ?></h2>

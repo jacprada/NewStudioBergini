@@ -286,7 +286,7 @@ div.project-bottom {
   display: block;
   width: 100%;
   clear: both;
-  text-align: left;
+  text-align: center;
   position: absolute;
   bottom: 0;
 }
@@ -362,19 +362,28 @@ h4.image-info {
   color: #000000;
 }
 
+p.text-toggle-more.desktop {
+  display: inline;
+  position: absolute;
+  left: 0;
+}
+
 h1.work-title {
-  padding-left: calc(32.8% + 15px);
+  // padding-left: calc(32.8% + 15px);
+  display: inline;
   color: #000000;
   font-style: italic;
 }
 
 h2.work-detail {
-  padding-left: calc(32.8% + 15px);
+  // padding-left: calc(32.8% + 15px);
+  display: inline;
   color: #000000;
 }
 
 h3.work-type {
-  padding-left: calc(32.8% + 15px);
+  // padding-left: calc(32.8% + 15px);
+  display: inline;
   color: #000000;
 }
 
@@ -428,7 +437,7 @@ img {
   max-width: 100%;
   height: 500px;
   margin: 0 auto;
-  padding: 0 7.5px;
+  // padding: 0 7.5px;
   display: block;
 }
 
@@ -542,16 +551,28 @@ img {
     position: relative;
   }
 
+  h1.work-info {
+    padding-top: 15px;
+    padding-left: 0;
+  }
+
+  p.text-toggle-more.desktop {
+    display: none !important;
+  }
+
   h1.work-title {
+    display: block;
     padding-top: 15px;
     padding-left: 0;
   }
 
   h2.work-detail {
+    display: block;
     padding-left: 0;
   }
 
   h3.work-type  {
+    display: block;
     padding-left: 0;
     padding-bottom: 15px;
   }

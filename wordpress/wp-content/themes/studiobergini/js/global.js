@@ -79,7 +79,17 @@ $(function() {
     itemSelector: '.grid-item',
     columnWidth: 400,
     stagger: 30,
+    initLayout: false,
   });
+
+  // bind event
+  $grid.masonry( 'on', 'layoutComplete', function() {
+    console.log('layout is complete');
+  });
+
+  function startMasonry() {
+    $grid.masonry()
+  }
 
   $grid.on( 'click', '.grid-item', function() {
     // change size of item via class
@@ -177,6 +187,7 @@ $(function() {
       setTimeout(outroAnimation, 1000);
       setTimeout(setWaypoints, 1000);
       setTimeout(getImageWidth, 1000);
+      setTimeout(startMasonry, 2000);
     }
   }
 
