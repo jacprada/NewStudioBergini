@@ -32,17 +32,20 @@
 	</div>
 
 	<!--   Header-Navigation Block -->
-	<header>
-	  <!--   Logo & Arrow -->
-	  <nav class="left-navigation">
-	    <ul>
+	<header> 
+	  <nav class="main-navigation">
+	  	<!--   Logo & Arrow -->
+	    <ul class="left-link-list">
 	      <li class="home-item"><a class="menu-link home-link" href="#">Studio Bergini</a></li>
 	      <li class="arrow-item"><a class="menu-link menu-arrow" href="#">&#8594;</a></li>
 	    </ul>
-	  </nav>
-	  <!--   Image Information (Full Size) -->
-	  <nav class="right-navigation"> 
-	    <ul>
+	    <!--   Image Information (Full Size) -->
+	    <ul class="center-link-list">
+	      <li class="center-item"><a class="menu-link selected-link" href="#">Selected work</a></li>
+	      <li class="center-item"><a class="menu-link archive-link" href="#">Archive</a></li>
+	    </ul>
+	    <!--   Image Information (Full Size) -->
+	    <ul class="right-link-list">
 	      <li class="right-item"><a class="menu-link slider-info" href="#"></a></li>
 	    </ul>
 	  </nav>

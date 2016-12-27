@@ -280,7 +280,7 @@ $(function() {
 
   function forceTextToggle(){
     $('.text-toggle-less').css('display', 'none');
-    $('.text-center, .text-right').css('display', 'none');
+    $('.text-left, .text-center, .text-right').css('display', 'none');
     $('.unslider').css('display', 'block');
     $('.slider-background').css('display', 'block');
     $('.text-toggle-more').css('display', 'block');
@@ -366,7 +366,7 @@ $(function() {
     $('#' + sectionId + ' .text-toggle-more').css('display', 'none');
     $('#' + sectionId + ' .unslider').css('display', 'none');
     $('#' + sectionId + ' .slider-background').css('display', 'none');
-    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block ');
+    $('#' + sectionId + ' .text-left, #' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'inline-block ');
     $('#' + sectionId + ' .text-toggle-less').css('display', 'block');
   })
 
@@ -375,7 +375,7 @@ $(function() {
     setWaypoints();
     var sectionId = $(this).parents('section')[0].id;
     $('#' + sectionId + ' .text-toggle-less').css('display', 'none');
-    $('#' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
+    $('#' + sectionId + ' .text-left, #' + sectionId + ' .text-center, #' + sectionId + ' .text-right').css('display', 'none');
     $('#' + sectionId + ' .unslider').css('display', 'block');
     $('#' + sectionId + ' .slider-background').css('display', 'block');
     $('#' + sectionId + ' .text-toggle-more').css('display', 'block');

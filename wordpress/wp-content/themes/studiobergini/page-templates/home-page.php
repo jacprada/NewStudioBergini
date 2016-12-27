@@ -40,11 +40,7 @@ get_header();
       <div class="project-container">
         <!--   Image Information (Mobile) -->
         <div class="project-top"><h4 class="image-info"></h4></div>
-        <div class="project-left">
-          <!--  First Paragraph (Add Text Here, Use <br> For New Line) -->
-          <p class="text-left"><?= $project_content_first ?></p>
-        </div>
-        <div class="project-right">
+        <div class="project-center">
           <!--  Project Images Slider (Add Images Here, Use Alt For Image Description) -->
           <div class="my-slider">
             <ul>
@@ -55,16 +51,18 @@ get_header();
           </div>
           <!--  Empty Container Set As Background For Black Slider Effect -->
           <div class="slider-background"></div>
+          <!--  First Paragraph (Add Text Here, Use <br> For New Line) -->
+          <p class="text-left"><?= $project_content_first ?></p>
           <!--  Second Paragraph (Add Text Here, Use <br> For New Line) -->
           <p class="text-center"><?= $project_content_second ?></p>
           <!--  Third Paragraph (Add Text Here, Use <br> For New Line) -->
           <p class="text-right"><?= $project_content_third ?></p>
-          <!--  Read Less Button (Full Size) -->
-          <p class="text-toggle-less"><br><a class="toggle-text toggle-less" href="#">(less)</a></p>
         </div>
         <div class="project-bottom">
           <!--  Read More Button (Full Size) -->
           <p class="text-toggle-more desktop"><a class="toggle-text toggle-more" href="#">(more)</a></p>
+          <!--  Read Less Button (Full Size) -->
+          <p class="text-toggle-less desktop"><a class="toggle-text toggle-less" href="#">(less)</a></p>
           <!--  Project Information, Add Text Here -->
           <h1 class="work-title"><?= $project_title ?></h1>
           <h2 class="work-detail"><?= $project_client ?></h2>
