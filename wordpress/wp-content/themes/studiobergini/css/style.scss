@@ -83,6 +83,7 @@ header {
   z-index: 30;
   width: 100%;
   height: 45px;
+  background-color: #FFFFFF;
 }
 
 // nav.left-navigation {
@@ -178,26 +179,18 @@ a {
   color: #000000;
   cursor: pointer;
   display: block;
-}
-
-.menu-arrow.open-menu {
-  color: #FFFFFF;
-  -webkit-transform: translateY(2.5px) rotate(-180deg);
-  -moz-transform: translateY(2.5px) rotate(-180deg);
-  transform: translateY(2.5px) rotate(-180deg);
-  -webkit-transition: color 0.5s, transform 0.5s;
-  -moz-transition: color 0.5s, transform 0.5s;
-  transition: color 0.5s, transform 0.5s;
-}
-
-.menu-arrow.close-menu {
-  color: #000000;
   -webkit-transform: translateY(0px) rotate(0deg);
   -moz-transform: translateY(0px) rotate(0deg);
   transform: translateY(0px) rotate(0deg);
-  -webkit-transition: color 0.75s, transform 0.5s;
-  -moz-transition: color 0.75s, transform 0.5s;
-  transition: color 0.75s, transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.menu-arrow.open-menu {
+  -webkit-transform: translateY(2.5px) rotate(90deg);
+  -moz-transform: translateY(2.5px) rotate(90deg);
+  transform: translateY(2.5px) rotate(90deg);
 }
 
 .home-link.open-menu {
@@ -241,29 +234,6 @@ div.sidebar.close-menu {
   -moz-transition: left 0.5s;
   transition: left 0.5s;
 }
-
-section.about {
-  height: 100%;
-  padding: 115px 15px 15px 15px;
-  background-color: #000000;
-  text-align: left;
-}
-
-h1.about-contact {
-  color: #FFFFFF;
-  padding: 15px 0 0 0;
-}
-
-p.about-text {
-  color: #FFFFFF;
-}
-
-h6.about-credits {
-  color: #FFFFFF;
-  position: absolute;
-  bottom: 15px;
-}
-
 
 
 /* MAIN BLOCK */
@@ -383,16 +353,6 @@ a.toggle-text:hover,
 a.text-link:hover {
   padding-bottom: 2px;
   border-bottom: 1px solid #000000;
-}
-
-a.contact-link {
-  font-style: italic;
-  color: #FFFFFF;
-}
-
-a.contact-link:hover {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #FFFFFF;
 }
 
 span.italic {
@@ -735,3 +695,4 @@ img {
 }
 
 @import 'archive';
+@import 'footer';
