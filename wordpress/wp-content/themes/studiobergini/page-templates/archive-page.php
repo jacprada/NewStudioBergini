@@ -53,7 +53,7 @@ get_header();
           <section class="project continuous-true" id="project-<?= $project_number ?>">
             <div class="project-container">
               <!--   Image Information (Mobile) -->
-              <div class="project-top"><h4 class="image-info"></h4></div>
+              <!-- <div class="project-top"><h4 class="image-info"></h4></div> -->
               <div class="project-center">
                 <!--  Project Images Slider (Add Images Here, Use Alt For Image Description) -->
                 <div class="my-slider">
@@ -74,13 +74,15 @@ get_header();
               </div>
               <div class="project-bottom">
                 <!--  Read More Button (Full Size) -->
-                <p class="text-toggle-more desktop"><a class="toggle-text toggle-more" href="#">(more)</a></p>
+                <p class="text-toggle-more desktop"><a class="toggle-text toggle-more" href="#">(description)</a></p>
                 <!--  Read Less Button (Full Size) -->
-                <p class="text-toggle-less desktop"><a class="toggle-text toggle-less" href="#">(less)</a></p>
+                <p class="text-toggle-less desktop"><a class="toggle-text toggle-less" href="#">(gallery)</a></p>
                 <!--  Project Information, Add Text Here -->
                 <h1 class="work-title"><?= $project_title ?></h1>
                 <h2 class="work-detail"><?= $project_client ?></h2>
                 <h3 class="work-type"><?= $project_type ?></h3>
+                <!--  Close Full Grid Item -->
+                <p class="resize-grid desktop"><a class="close-grid-full" href="#">(close)</a></p>
                 <!--  Read Less Button (Mobile) -->
                 <h6 class="toggle-text-mobile read-more-mobile">(more)</h6>
               </div>

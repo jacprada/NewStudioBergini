@@ -41,8 +41,8 @@
 	    </ul>
 	    <!--   Image Information (Full Size) -->
 	    <ul class="center-link-list">
-	      <li class="center-item"><a class="menu-link selected-link" href="#">Selected work</a></li>
-	      <li class="center-item"><a class="menu-link archive-link" href="#">Archive</a></li>
+	      <li class="center-item"><a class="menu-link selected-link" href="/">Selected work</a></li>
+	      <li class="center-item"><a class="menu-link archive-link" href="/archive">Archive</a></li>
 	    </ul>
 	    <!--   Image Information (Full Size) -->
 	    <ul class="right-link-list">

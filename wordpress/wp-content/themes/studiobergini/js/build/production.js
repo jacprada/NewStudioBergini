@@ -13754,32 +13754,35 @@ $(function() {
   // external JS: masonry.pkgd.js
 
   var $grid = $('.grid').masonry({
-    // itemSelector: '.grid-item',
-    // columnWidth: 400,
     columnWidth: '.grid-sizer',
     gutter: '.gutter-sizer',
     itemSelector: '.grid-item',
     percentPosition: true,
     transitionDuration: '0.5s',
-    stagger: 30
-    // stagger: 30,
-    // initLayout: false,
   });
 
   // bind event
   $grid.masonry( 'on', 'layoutComplete', function() {
     console.log('layout is complete');
+    $('.grid').addClass('positioned');
   });
 
   function startMasonry() {
     $grid.masonry()
   }
 
-  $grid.on( 'click', '.grid-item', function() {
-    // change size of item via class
-    $( this ).toggleClass('grid-item--gigante');
-    // trigger layout
-    $grid.masonry();
+  $grid.on('click', '.grid-item', function(event) {
+    if($(this).hasClass('grid-item--full')) {
+      if($(event.target).is('.close-grid-full')) {
+        $(this).removeClass('grid-item--full');
+        $grid.masonry();
+      } else {
+        return false
+      }
+    } else {
+      $(this).toggleClass('grid-item--full');
+      $grid.masonry();
+    }
   });
 
 
@@ -13795,28 +13798,32 @@ $(function() {
   }
 
   var currentHash = "#initial_hash"
-  $(document).scroll(function () {
-    $('.anchor').each(function () {
-      var top = window.pageYOffset;
-      // console.log(top)
-      // var bottom = $(this).attr('href').height();
-      // console.log($(this).attr('id'))
-      var blala = $('section.project').first()
-      var bottom = blala[0].offsetHeight
-      // console.log(bottom)
-      var distance = top - $(this).offset().top;
-      console.log($(this).offset().top)
-      // var distance = top - bottom;
-      console.log(distance)
-      var hash = $(this).attr('id');
-              // 30 is an arbitrary padding choice, 
-              // if you want a precise check then use distance===0
-      if (distance === 0 && currentHash != hash) {
-                window.location.hash = (hash);
-                currentHash = hash;
-              }
-            });
-  });
+
+  if($('.body').hasClass('page-template-home-page')) {
+    $(document).scroll(function () {
+      $('.anchor').each(function () {
+        var top = window.pageYOffset;
+        // console.log(top)
+        // var bottom = $(this).attr('href').height();
+        // console.log($(this).attr('id'))
+        var blala = $('section.project').first()
+        var bottom = blala[0].offsetHeight
+        // console.log(bottom)
+        var distance = top - $(this).offset().top;
+        console.log($(this).offset().top)
+        // var distance = top - bottom;
+        console.log(distance)
+        var hash = $(this).attr('id');
+                // 30 is an arbitrary padding choice, 
+                // if you want a precise check then use distance===0
+        if (distance === 0 && currentHash != hash) {
+                  window.location.hash = (hash);
+                  currentHash = hash;
+                }
+              });
+    });
+  }
+  
 
   function getImageWidth() {
     var array = [];
@@ -13834,7 +13841,13 @@ $(function() {
     var url = window.location.href;
     var hash = "#"
     var windowWidth = $(window).width()
-    if (url.indexOf(hash) >= 0) {
+    if($('body').hasClass('page-template-archive-page')) {
+          $('.intro').css('display', 'none');
+          $('header').css('display', 'block');
+          $('main').css('display', 'block');
+          setTimeout(getImageWidth, 500);
+          setTimeout(startMasonry, 500);
+    } else if (url.indexOf(hash) >= 0) {
       $('.intro').css('display', 'none');
       $('header').css('display', 'block');
       $('main').css('display', 'block');
@@ -13845,7 +13858,6 @@ $(function() {
       setTimeout(outroAnimation, 1000);
       setTimeout(setWaypoints, 1000);
       setTimeout(getImageWidth, 1000);
-      setTimeout(startMasonry, 2000);
     }
   }
 
