@@ -33,7 +33,7 @@ function as_init() {
     'has_archive'           => false,
     'hierarchical'          => false,
     'menu_position'         => 5,
-    'supports'              => array('title'),
+    'supports'              => array('title', 'thumbnail'),
     'show_ui'               => true,
     'query_var'             => true,
     'show_in_menu'          => true,

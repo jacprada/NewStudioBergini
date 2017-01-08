@@ -92,10 +92,16 @@ $(function() {
   // external JS: masonry.pkgd.js
 
   var $grid = $('.grid').masonry({
+    // itemSelector: '.grid-item',
+    // columnWidth: 400,
+    columnWidth: '.grid-sizer',
+    gutter: '.gutter-sizer',
     itemSelector: '.grid-item',
-    columnWidth: 400,
-    stagger: 30,
-    initLayout: false,
+    percentPosition: true,
+    transitionDuration: '0.5s',
+    stagger: 30
+    // stagger: 30,
+    // initLayout: false,
   });
 
   // bind event
